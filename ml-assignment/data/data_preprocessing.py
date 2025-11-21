@@ -4,10 +4,10 @@ import pandas as pd
 import os
 import string
 from collections import Counter
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-nltk.download('wordnet')
-nltk.download('stopwords')
+#from nltk.corpus import stopwords
+#from nltk.stem import WordNetLemmatizer
+#nltk.download('wordnet')
+#nltk.download('stopwords')
 
 def preprocess_dataframe(df, col='text'):
     """
@@ -21,8 +21,8 @@ def preprocess_dataframe(df, col='text'):
         pd.DataFrame: The preprocessed DataFrame.
     """
     # Initialize lemmatizer and stopwords
-    lemmatizer = WordNetLemmatizer()
-    stop_words = set(stopwords.words("english"))
+    #lemmatizer = WordNetLemmatizer()
+    #stop_words = set(stopwords.words("english"))
 
     def preprocess_text(text):
         """Helper function to preprocess a single text string."""
@@ -37,9 +37,9 @@ def preprocess_dataframe(df, col='text'):
         text = text.replace('؛', "")
         text = re.sub('\s+', ' ', text).strip()
         # Remove stop words
-        text = " ".join([word for word in text.split() if word not in stop_words])
+        #text = " ".join([word for word in text.split() if word not in stop_words])
         # Lemmatization
-        text = " ".join([lemmatizer.lemmatize(word) for word in text.split()])
+        #text = " ".join([lemmatizer.lemmatize(word) for word in text.split()])
         return text
     
     

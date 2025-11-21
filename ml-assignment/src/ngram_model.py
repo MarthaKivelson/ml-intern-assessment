@@ -92,11 +92,11 @@ def main():
     # IMPORTANT: 'converters' is needed to turn the string "['a','b']" back into a real list
     try:
         ngram_df = pd.read_csv(
-            "./data/interim/training_data.csv", 
+            "data/interim/training_data.csv", 
             converters={'tokens': ast.literal_eval}
         )
     except FileNotFoundError:
-        print("Error: Training data not found. Run data_preprocessing.py first.")
+        print("Error: Training data not found.")
         return
 
     # Initialize
@@ -104,7 +104,8 @@ def main():
     
     # Train
     # Pass the Series of lists to the fit method
-    model.fit(ngram_df['tokens'])
+    print(ngram_df['tokens'][:50])
+    #model.fit(ngram_df['tokens'])
     
     # Generate
     print("\n" + "="*40)

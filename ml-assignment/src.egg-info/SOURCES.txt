@@ -1,0 +1,15 @@
+README.md
+setup.py
+data/__init__.py
+data/data_preprocessing.py
+src/__init__.py
+src/generate.py
+src/ngram_model.py
+src/utils.py
+src.egg-info/PKG-INFO
+src.egg-info/SOURCES.txt
+src.egg-info/dependency_links.txt
+src.egg-info/top_level.txt
+tests/__init__.py
+tests/my_test.py
+tests/test_ngram.py

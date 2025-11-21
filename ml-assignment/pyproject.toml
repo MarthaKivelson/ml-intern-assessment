@@ -1,0 +1,11 @@
+[project]
+name = "ml_intern_assessment"
+version = "0.0.1"
+description = "NLP task"
+authors = [{name = "Uttam", email = "kputtam7@gmail.com"}]
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
