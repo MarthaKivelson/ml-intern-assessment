@@ -69,6 +69,7 @@ ml-assignment/
 **Task 2: Scaled Dot-Product Attention (Optional, Bonus)**
 
 * Pure NumPy implementation of scaled dot-product attention
+* Supports masked attention 
 * Supports causal and padding masks
 * Demonstrations and unit tests to validate correctness
 
