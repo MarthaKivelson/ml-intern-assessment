@@ -12,7 +12,6 @@ This repository contains my submission for the ML Internship assessment. It impl
 
 ## Contents (High-level)
 
-```
 
 Below is the actual structure of the project based on the uploaded screenshot:
 
@@ -52,6 +51,7 @@ ml-assignment/
 ├── pyproject.toml
 ├── setup.py
 └── .gitignore
+
 ```
 ---
 
