@@ -13,19 +13,46 @@ This repository contains my submission for the ML Internship assessment. It impl
 ## Contents (High-level)
 
 ```
-mlassignment/
-├── src/                          # Core implementations and training scripts
-├── attention_task/               # Optional attention task (bonus)
-├── tests/                        # Unit tests for core functionality
-├── data/                         # Example/generated corpora
-├── README.md                     # (this file)
-├── evaluation.md                 # Design decisions and evaluation notes
-├── requirements.txt              # Python dependencies
-└── SUBMISSION_SUMMARY.md         # Submission overview
+
+Below is the actual structure of the project based on the uploaded screenshot:
+
 ```
-
-> See the project structure screenshot for exact layout: `/mnt/data/12518289-8b47-4a5b-873c-8adfc09742a5.png`
-
+ml-assignment/
+│
+├── attention_implementation/          # Optional attention mechanism
+│   ├── __pycache__/
+│   ├── attention_task.py              # Numpy-based attention implementation
+│   └── attention_test.py              # Unit tests for attention
+│
+├── data/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── data_preprocessing.py          # Text preprocessing & n-gram preparation
+│   └── example_corpus.txt             # Sample text file
+│
+├── src/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── generate.py                    # Wrapper for text generation
+│   ├── ngram_model.py                 # Core trigram model implementation
+│   └── utils.py                       # Helper utilities
+│
+├── tests/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── my_test.py                     # Additional tests
+│   └── test_ngram.py                  # Tests for trigram model
+│
+├── FRANKENSTEIN.txt                   # Raw corpus used for training
+├── assignment.md
+├── evaluation.md                      # Notes on implementation & design
+├── quick_start.md
+├── requirements.txt                   # Dependencies
+├── README.md                          # Project documentation
+├── pyproject.toml
+├── setup.py
+└── .gitignore
+```
 ---
 
 ## What I implemented

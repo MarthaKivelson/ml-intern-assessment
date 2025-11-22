@@ -31,11 +31,11 @@ This structure models the probability:
 
 Text preprocessing is handled in `preprocess_dataframe()` using:
 
-### ✔ Lowercasing
+### Lowercasing
 
 Ensures consistent vocabulary and prevents case‑based duplicates.
 
-### ✔ URL removal
+### URL removal
 
 ```python
 re.sub(r'https?://\S+|www\.\S+', '', text)
@@ -43,11 +43,11 @@ re.sub(r'https?://\S+|www\.\S+', '', text)
 
 Prevents noisy tokens from turning into `<UNK>`.
 
-### ✔ Number removal
+### Number removal
 
 Removes digits entirely to reduce vocabulary noise.
 
-### ✔ Punctuation stripping
+### Punctuation stripping
 
 ```python
 re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
@@ -55,7 +55,7 @@ re.sub('[%s]' % re.escape(string.punctuation), ' ', text)
 
 Standardizes text into pure word tokens.
 
-### ✔ Whitespace normalization
+### Whitespace normalization
 
 Ensures clean token splitting.
 
@@ -131,19 +131,19 @@ random.choices(words, weights=counts, k=1)
 
 ## 6. Additional Design Decisions
 
-### ✔ Treat each input line as an independent sentence
+### Treat each input line as an independent sentence
 
 Prevents accidental cross‑sentence trigrams.
 
-### ✔ Use CSV saving/loading with `ast.literal_eval`
+### Use CSV saving/loading with `ast.literal_eval`
 
 Allows clean storage of Python list tokens inside CSV files.
 
-### ✔ Early stopping in generation
+### Early stopping in generation
 
 Protects against infinite loops if no valid continuation exists.
 
-### ✔ Simple modular design
+### Simple modular design
 
 Separated into:
 
