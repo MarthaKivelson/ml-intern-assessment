@@ -77,7 +77,7 @@ ml-assignment/
 
 ## Code Statistics (approx.)
 
-* Total Lines of Code: ~950
+* Total Lines of Code: ~550
 * Test Coverage: Core functionality covered by unit tests
 * Dependencies: NumPy, pytest (see `requirements.txt`)
 
